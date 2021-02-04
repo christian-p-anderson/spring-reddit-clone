@@ -15,7 +15,7 @@ public class UserIntegrationTest {
         assertEquals(user.getFirstName(), "Test");
     }
 
-    @Getter @Setter
+    @Setter @Getter
     class User {
         private String firstName;
     }
