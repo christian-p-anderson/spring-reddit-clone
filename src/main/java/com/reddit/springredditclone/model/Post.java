@@ -1,2 +1,4 @@
-package com.reddit.springredditclone.model;public class Post {
+package com.reddit.springredditclone.model;
+
+public class Post {
 }

@@ -1,2 +1,4 @@
-package com.reddit.springredditclone.model;public class Comment {
+package com.reddit.springredditclone.model;
+
+public class Comment {
 }

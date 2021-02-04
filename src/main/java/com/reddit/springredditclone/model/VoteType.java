@@ -1,2 +1,4 @@
-package com.reddit.springredditclone.model;public class VoteType {
+package com.reddit.springredditclone.model;
+
+public class VoteType {
 }
