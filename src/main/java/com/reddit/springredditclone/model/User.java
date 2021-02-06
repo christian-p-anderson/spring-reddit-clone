@@ -13,7 +13,7 @@ import javax.validation.constraints.NotEmpty;
 
 import java.time.Instant;
 
-import static javax.persistence.GenerationType.SEQUENCE;
+import static javax.persistence.GenerationType.IDENTITY;
 
 @Data
 @AllArgsConstructor
@@ -21,9 +21,11 @@ import static javax.persistence.GenerationType.SEQUENCE;
 @Entity
 public class User {
         @Id
-        @GeneratedValue(strategy = SEQUENCE)
+        @GeneratedValue(strategy = IDENTITY)
         private Long userId;
         @NotBlank(message = "Username is required")
+        private String username;
+        @NotBlank(message = "Password is required")
         private String password;
         @Email
         @NotEmpty(message = "Email is required")

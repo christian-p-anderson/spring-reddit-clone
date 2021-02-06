@@ -21,7 +21,7 @@ public class VerificationToken {
     @GeneratedValue(strategy = IDENTITY)
     private Long id;
     private String token;
-    @OneToMany(fetch = LAZY)
+    @OneToOne(fetch = LAZY)
     private User user;
     private Instant expiryDate;
 }
