@@ -15,4 +15,7 @@ public class MailContentBuilder {
         context.setVariable("message", message);
         return templateEngine.process("mailTemplate", context);
     }
+
+//    String message = mailContentBuilder.build("Thank you for signing up to Spring Reddit, please click on the below url " +
+//            "to activate your account : " + ACTIVATION_EMAIL + "/" + token);
 }
