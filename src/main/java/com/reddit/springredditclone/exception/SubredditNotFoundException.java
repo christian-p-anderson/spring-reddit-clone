@@ -1,2 +1,7 @@
-package com.reddit.springredditclone.exception;public class SubredditNotFoundException {
+package com.reddit.springredditclone.exception;
+
+public class SubredditNotFoundException extends RuntimeException {
+    public SubredditNotFoundException (String message) {
+        super(message);
+    }
 }
