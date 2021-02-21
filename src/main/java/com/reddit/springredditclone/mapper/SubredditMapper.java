@@ -10,7 +10,7 @@ import org.mapstruct.Mapping;
 import java.util.List;
 
 @Mapper(componentModel = "spring")
-public interface SubbredditMapper {
+public interface SubredditMapper {
 
     @Mapping(target = "numberOfPosts", expression = "java(mapPosts(subreddit.getPosts()))")
     SubredditDto mapSubredditToDto(Subreddit subreddit);
