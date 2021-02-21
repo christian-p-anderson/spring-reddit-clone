@@ -1,12 +1,16 @@
 package com.reddit.springredditclone.controller;
 
 import com.reddit.springredditclone.dto.PostRequest;
+import com.reddit.springredditclone.dto.PostResponse;
+import com.reddit.springredditclone.service.PostService;
 import lombok.AllArgsConstructor;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
 import javax.xml.ws.Response;
+
+import java.util.List;
 
 import static org.springframework.http.ResponseEntity.status;
 
@@ -24,11 +28,11 @@ public class PostController {
 
     @GetMapping
     public ResponseEntity<List<PostResponse>> getAllPosts() {
-        return status(HttpStatus.OK).body(postService.getPost(id));
+        return status(HttpStatus.OK).body(postService.getAllPosts());
     }
 
     @GetMapping("/{id}")
-    public RespinseEntity<PostResponse> getPost(@PathVariable Long id) {
+    public ResponseEntity<PostResponse> getPost(@PathVariable Long id) {
         return status(HttpStatus.OK).body(postService.getPost(id));
     }
 
